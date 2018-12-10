@@ -1,0 +1,33 @@
+h1 {
+  color: #8ae052;
+  -webkit-animation: prdev 2s linear infinite alternate;
+  -moz-animation: prdev 2s linear infinite alternate;
+  animation: prdev 2s linear infinite alternate;
+}
+
+@-webkit-keyframes prdev {
+  0% {
+    color: #92f475;
+  }
+  100% {
+    color: #2fad1f;
+  }
+}
+
+@-moz-keyframes prdev {
+  0% {
+    color: #92f475;
+  }
+  100% {
+    color: #2fad1f;
+  }
+}
+
+@keyframes prdev {
+  0% {
+    color: #92f475;
+  }
+  100% {
+    color: #2fad1f;
+  }
+}
