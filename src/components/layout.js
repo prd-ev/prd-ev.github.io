@@ -33,7 +33,8 @@ const Title = styled.h1`
 `
 
 const Footer = styled.footer`
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
