@@ -6,6 +6,12 @@ import { Helmet } from 'react-helmet'
 
 import './layout.css'
 
+const Site = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`
+
 const Nav = styled.div`
   padding: 10px;
   display: flex;
@@ -18,6 +24,7 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex: 1;
 `
 
 const Title = styled.h1`
@@ -25,8 +32,15 @@ const Title = styled.h1`
   margin: 0;
 `
 
+const Footer = styled.footer`
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const Layout = ({ children, siteName }) => (
-  <>
+  <Site>
     <Helmet>
       <link
         href="https://fonts.googleapis.com/css?family=Advent+Pro"
@@ -43,7 +57,16 @@ const Layout = ({ children, siteName }) => (
       <Title>PRDev</Title>
     </Nav>
     <Content>{children}</Content>
-  </>
+    <Footer>
+      <a href="https://github.com/prd-ev/">
+        <img
+          src={withPrefix('/gh.png')}
+          alt="Logo"
+          style={{ width: '50px', height: '50px' }}
+        />
+      </a>
+    </Footer>
+  </Site>
 )
 
 Layout.propTypes = {
