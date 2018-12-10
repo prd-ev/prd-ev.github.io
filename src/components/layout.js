@@ -32,7 +32,7 @@ const Layout = ({ children, siteName }) => (
         href="https://fonts.googleapis.com/css?family=Advent+Pro"
         rel="stylesheet"
       />
-      <title>{`PRDev - ${siteName}`}</title>
+      <title>PRDev</title>
     </Helmet>
     <Nav>
       <img
