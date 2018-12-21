@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
+import { withPrefix, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import './layout.css'
@@ -9,6 +9,7 @@ import './layout.css'
 const Site = styled.div`
   display: flex;
   min-height: 100vh;
+  font-size: 20px;
   flex-direction: column;
 `
 
@@ -17,7 +18,23 @@ const Nav = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 `
+
+const Menu = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const MenuItem = styled(Link)`
+  margin: 10px;
+  color: #2fad1f;
+
+  &:before {
+    background-color: #2fad1f;
+  }
+`
+
 const Content = styled.div`
   margin: 5vmin;
   color: #47ad23;
@@ -33,7 +50,7 @@ const Title = styled.h1`
 `
 
 const Footer = styled.footer`
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -47,15 +64,32 @@ const Layout = ({ children, siteName }) => (
         href="https://fonts.googleapis.com/css?family=Advent+Pro"
         rel="stylesheet"
       />
-      <title>PRDev</title>
+      <title>PRDev{siteName ? ' - ' + siteName : ''}</title>
     </Helmet>
     <Nav>
       <img
         src={withPrefix('/PRDev-big.png')}
         alt="Logo"
-        style={{ width: '300px', height: '300px' }}
+        style={{
+          width: '100px',
+          height: '100px',
+          marginTop: '1vmin',
+          marginBottom: '1vmin',
+        }}
       />
       <Title>PRDev</Title>
+      <Menu>
+        <MenuItem to="/" className={'link'} activeClassName={'active'}>
+          Home
+        </MenuItem>
+        <MenuItem
+          to="/resources/"
+          className={'link'}
+          activeClassName={'active'}
+        >
+          Resources
+        </MenuItem>
+      </Menu>
     </Nav>
     <Content>{children}</Content>
     <Footer>
