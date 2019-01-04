@@ -10,7 +10,7 @@ const IndexPage = () => (
     <h3 style={{ textAlign: 'center' }}>
       Napisz do nas:{' '}
       <a href="mailto:biuro.tkgf@gmail.com" className={'text-link'}>
-        biuro&nbsp;.tkgf@gmail.com
+        biuro.tkgf@gmail.com
       </a>
     </h3>
   </Layout>

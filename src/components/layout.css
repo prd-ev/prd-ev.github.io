@@ -40,6 +40,7 @@ body {
 }
 
 .text-link {
+  letter-spacing: 1px;
   color: #47ad23;
   text-decoration: none;
   padding: 3px;
