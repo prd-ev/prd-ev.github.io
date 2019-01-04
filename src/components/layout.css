@@ -41,13 +41,15 @@ body {
 
 .text-link {
   color: #47ad23;
-  text-decoration: underline;
-  padding: 2px;
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-left: 2px;
   margin-right: 2px;
   background-image: linear-gradient(to bottom, #47ad23 50%, white 50%);
   background-size: 100% 200%;
-  background-position: 0 -100%;
+  background-position: 0 -95%;
   transition: color 0.5s, background-position 0.5s;
 }
 
