@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import TextLink from '../components/ui/TextLink'
 
 const IndexPage = () => (
   <Layout>
@@ -9,9 +10,9 @@ const IndexPage = () => (
     </h2>
     <h3 style={{ textAlign: 'center' }}>
       Napisz do nas:{' '}
-      <a href="mailto:biuro.tkgf@gmail.com" className={'text-link'}>
+      <TextLink href="mailto:biuro.tkgf@gmail.com" color="#47ad23">
         biuro.tkgf@gmail.com
-      </a>
+      </TextLink>
     </h3>
   </Layout>
 )
