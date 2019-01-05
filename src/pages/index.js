@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import TextLink from '../components/ui/TextLink'
+import TextLink from '../components/TextLink/TextLink'
 
 const IndexPage = () => (
   <Layout>
