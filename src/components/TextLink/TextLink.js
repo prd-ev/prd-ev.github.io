@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const A = styled.a`
   letter-spacing: 1px;
-  color: ${props => props.color};
+  color: ${props => props.color || 'black'};
   text-decoration: none;
   padding: 3px;
   padding-left: 5px;
@@ -12,8 +12,8 @@ const A = styled.a`
   margin-right: 2px;
   background-image: linear-gradient(
     to bottom,
-    ${props => props.color} 50%,
-    white 50%
+    ${props => props.color || 'black'} 50%,
+    ${props => props.bgColor || 'white'} 50%
   );
   background-size: 100% 200%;
   background-position: 0 -95%;
@@ -28,7 +28,7 @@ const A = styled.a`
 
 const TextLink = props => {
   return (
-    <A href={props.href} color={props.color}>
+    <A href={props.href} color={props.color} bgColor={props.bgColor}>
       {props.children}
     </A>
   )
