@@ -23,5 +23,10 @@ export default () => (
         apple.tar.gz
       </a>
     </Resource>
+    <Resource>
+      <a href={withPrefix('/files/rap.tar.gz')} className={'text-link'}>
+        rap.tar.gz
+      </a>
+    </Resource>
   </Layout>
 )
