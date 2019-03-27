@@ -82,6 +82,9 @@ const Layout = ({ children, siteName }) => (
         <MenuItem to="/" className={'link'} activeClassName={'active'}>
           Home
         </MenuItem>
+        <MenuItem to="/projects/" className={'link'} activeClassName={'active'}>
+          Projects
+        </MenuItem>
         <MenuItem
           to="/resources/"
           className={'link'}

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Resource = styled.li`
   color: #2fad1f;
-
+  margin-top: 15px;
   & > a {
     color: #2fad1f;
   }
